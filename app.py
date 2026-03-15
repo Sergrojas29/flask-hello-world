@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    return 'Hello World from Sergio Rojas-Aguilar in 3308'
 
 
 
@@ -60,12 +60,13 @@ def insert():
     ('Stephen', 'Curry', 'San Francisco', 'Warriors', 30),
     ('Nikola', 'Jokic', 'Denver', 'Nuggets', 15),
     ('Kawhi', 'Leonard', 'Los Angeles', 'Clippers', 2);
+    ('Sergio', 'Rojas-Aguilar', 'CU Boulder', 'Penguins', 3308);
     ''')
     
     conn.commit()
     conn.close()
     
-    return "Basketball Table Successfully Populated"
+    return "Basketball Table Populated"
 
 
 @app.route('/db_select')
@@ -106,4 +107,4 @@ def drop():
     conn.commit()
     conn.close()
     
-    return "Basketball Table Successfully Dropped"
+    return "Basketball Table Dropped"
