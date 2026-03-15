@@ -17,8 +17,13 @@ def hello_world():
     return 'Hello, World!'
 
 
+@app.route('/1')
+def test1():
+    return 'test1'
+
+
 @app.route('/db_test')
-def db_test():
+def testing():
     conn = psycopg2.connect(DB_URL) 
     conn.close()
     return  "Database Connection Successful"
