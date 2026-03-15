@@ -59,7 +59,7 @@ def insert():
     ('Jayson', 'Tatum', 'Boston', 'Celtics', 0),
     ('Stephen', 'Curry', 'San Francisco', 'Warriors', 30),
     ('Nikola', 'Jokic', 'Denver', 'Nuggets', 15),
-    ('Kawhi', 'Leonard', 'Los Angeles', 'Clippers', 2);
+    ('Kawhi', 'Leonard', 'Los Angeles', 'Clippers', 2),
     ('Sergio', 'Rojas-Aguilar', 'CU Boulder', 'Penguins', 3308);
     ''')
     
