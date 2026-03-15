@@ -1,7 +1,8 @@
 from flask import Flask
+import os
 import psycopg2
 
-
+DB_URL = os.getenv("DB_URL")
 
 
 
@@ -18,7 +19,8 @@ def hello_world():
 
 @app.route('/db_test')
 def db_test():
-    conn = psycopg2.connect("your_db_url_here") 
+    conn = psycopg2.connect(DB_URL) 
     conn.close()
     return  "Database Connection Successful"
+    
     
