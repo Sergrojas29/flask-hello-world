@@ -2,7 +2,7 @@ from flask import Flask
 import os
 import psycopg2
 
-DB_URL = os.getenv("DB_URL")
+
 
 
 
@@ -17,13 +17,12 @@ def hello_world():
     return 'Hello, World!'
 
 
-@app.route('/1')
-def test1():
-    return 'test1'
-
 
 @app.route('/db_test')
 def testing():
+    DB_URL = os.getenv("DB_URL")
+    if not DB_URL:
+        return f"No .evn called DB_URL"
     conn = psycopg2.connect(DB_URL) 
     conn.close()
     return  "Database Connection Successful"
